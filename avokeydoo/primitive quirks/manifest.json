@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Avokeydo",
+    "version": "1.3",
+    "description": "Tracks live WPM and all keystrokes across websites.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["https://*/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "iconn.png",
+        "default_title": "Open Tracker",
+        "default_popup": "popup.html"
+    }
+}

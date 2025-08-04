@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>avokeydo</title>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+      #writer-container {
+        text-align: center;
+        margin: 10px auto;
+        max-width: 90%;
+        line-height: 1.4;
+      }
+      #writer-type {
+        font-size: 1.05em;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+      #writer-desc {
+        font-size: 0.9em;
+        color: #444;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>avokeydo</h2>
+
+    <!-- Tabs -->
+    <div class="tab-buttons">
+      <button id="tab-logger">Keystrokes</button>
+      <button id="tab-metrics">Metrics</button>
+    </div>
+
+    <!-- Logger Tab -->
+    <div id="logger-tab" class="tab">
+      <p id="wpm-display">Current WPM: 0</p>
+
+      <!-- Writer Type Display -->
+      <div id="writer-container">
+        <p id="writer-type">Writer Type: Analyzing...</p>
+        <p id="writer-desc"></p>
+      </div>
+
+      <button id="toggle-wpm">Hide WPM Overlay</button>
+      <button id="clear">Clear Keystrokes</button>
+      <pre id="keystrokes">Loading keystrokes...</pre>
+    </div>
+
+    <!-- Metrics Tab -->
+    <div id="metrics-tab" class="tab" style="display: none;">
+      <pre id="metrics-display">Loading metrics...</pre>
+    </div>
+
+
+    <!-- Load core logic -->
+    <script src="sentiment.min.js"></script>
+    <script type="module" src="global-expose.js"></script>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

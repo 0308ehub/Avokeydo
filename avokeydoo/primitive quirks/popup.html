@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Typing Stats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background-color: #f5f5f5;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    #stats-display {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 500px;
+      text-align: left;
+    }
+    h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #444;
+      text-align: center;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+    .stat-title {
+      font-weight: bold;
+      color: #333;
+    }
+    .highlight {
+      color: #007bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="stats-display">
+    <h3>Typing Habits Dashboard</h3>
+    <p><span class="stat-title">Total keys pressed:</span> <span id="total-keys" class="highlight">Loading...</span></p>
+    <p><span class="stat-title">Favorite key:</span> <span id="favorite-key" class="highlight">Loading...</span></p>
+    <p><span class="stat-title">Average message length:</span> <span id="avg-message" class="highlight">Loading...</span> characters</p>
+    <p><span class="stat-title">Average sentence length:</span> <span id="avg-sentence" class="highlight">Loading...</span> characters</p>
+    <p><span class="stat-title">Total words typed:</span> <span id="total-words" class="highlight">Loading...</span></p>
+    <p><span class="stat-title">Average words per message:</span> <span id="avg-words" class="highlight">Loading...</span></p>
+    <p><span class="stat-title">Caps Lock usage:</span> <span id="caps-lock" class="highlight">Loading...</span></p>
+    <p><span class="stat-title">Space key usage:</span> <span id="space-key" class="highlight">Loading...</span></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

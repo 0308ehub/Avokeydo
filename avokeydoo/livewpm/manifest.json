@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Live WPM Tracker",
+    "version": "1.2",
+    "description": "Tracks and displays live words per minute (WPM) as you type.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["https://*/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_icon": "iconn.png",
+        "default_title": "Open WPM Tracker"
+    }
+}
